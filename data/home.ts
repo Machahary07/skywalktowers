@@ -7,8 +7,18 @@ export const homeData = {
     description:
       "Rise to a lifestyle where the skyline is your everyday view. SKYWALK TOWERS redefines urban luxury with elegant architecture, panoramic terraces, and tranquil surroundings.",
     image: "/images/hero-tower.webp",
-    ctaPrimary: "Explore Homes",
+    ctaPrimary: "Download Booklets",
     ctaSecondary: "Book a Visit",
+    booklets: [
+      {
+        name: "Layout Booklet",
+        file: "/pdfs/SKYWALK TOWERS-LAYOUT-AUGUST-m.pdf",
+      },
+      {
+        name: "Primary Booklet",
+        file: "/pdfs/SKYWALK TOWERS-PRIMARY-AUGUST-m.pdf",
+      },
+    ],
   },
 
   about: {

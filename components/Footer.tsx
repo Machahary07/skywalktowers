@@ -1,9 +1,11 @@
 // components/Footer.tsx
 import Link from "next/link";
 import { footerData } from "@/data/footer";
+import { homeData } from "@/data/home";
 
 export default function Footer() {
-  const { brand, contact, consultants } = footerData;
+  const { brand, contact } = footerData;
+  const { hero } = homeData;
 
   return (
     <footer className="bg-black text-gray-300 py-12 px-6">
@@ -24,8 +26,11 @@ export default function Footer() {
             {[
               { name: "Home", href: "/" },
               { name: "About", href: "/about" },
+              { name: "Features", href: "/features" },
               { name: "Residences", href: "/residences" },
               { name: "Amenities", href: "/amenities" },
+              { name: "Gallery", href: "/gallery" },
+              { name: "Location", href: "/location" },
               { name: "Contact", href: "/contact" },
             ].map((link) => (
               <li key={link.name}>
@@ -58,13 +63,19 @@ export default function Footer() {
           </p>
         </div>
 
-        {/* Consultants */}
+        {/* Download Booklets */}
         <div>
-          <h4 className="text-lg font-medium text-white mb-4">Consultants</h4>
-          <ul className="space-y-2 text-sm opacity-80">
-            {consultants.map((item, i) => (
+          <h4 className="text-lg font-medium text-white mb-4">Download Booklets</h4>
+          <ul className="space-y-2 text-sm">
+            {hero.booklets.map((booklet, i) => (
               <li key={i}>
-                {item.role}: {item.name}
+                <a
+                  href={booklet.file}
+                  download
+                  className="hover:text-[#C4001D] flex items-center gap-1"
+                >
+                  {booklet.name} →
+                </a>
               </li>
             ))}
           </ul>
