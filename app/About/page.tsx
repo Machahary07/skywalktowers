@@ -115,35 +115,57 @@ export default function AboutPage() {
       </section>
 
       {/* 5️⃣ Consultants Section */}
-      <section className="py-20 px-6 bg-gray-100 dark:bg-zinc-900">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-bold mb-10 text-center">
-            {consultants.heading}
-          </h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            {consultants.list.map((c, i) => (
-              <div
-                key={i}
-                className="p-6 bg-white dark:bg-zinc-800 rounded-2xl shadow-sm border border-zinc-200 dark:border-zinc-700"
+      <section className="py-20 px-6 bg-black text-white">
+  <div className="max-w-6xl mx-auto">
+    <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-[#C4001D]">
+      {consultants.heading}
+    </h2>
+
+    <div className="grid md:grid-cols-2 gap-8">
+      {consultants.list.map((c, i) => (
+        <div
+          key={i}
+          className="p-8 bg-[#111] border border-[#222] rounded-2xl shadow-md hover:border-[#C4001D] hover:shadow-[#C4001D]/20 transition-all duration-300"
+        >
+          <h3 className="text-lg font-semibold text-[#C4001D] mb-2 uppercase tracking-wide">
+            {c.title}
+          </h3>
+
+          <p className="text-xl font-medium text-white mb-1">
+            {c.name}
+          </p>
+
+          <p className="text-sm text-gray-400 mb-2">{c.details}</p>
+
+          {c.email && (
+            <p className="text-sm text-gray-400">
+              <span className="text-gray-500">Email:</span>{" "}
+              <a
+                href={`mailto:${c.email}`}
+                className="hover:text-[#C4001D] transition-colors"
               >
-                <h3 className="text-lg font-semibold text-[#C4001D] mb-1">
-                  {c.title}
-                </h3>
-                <p className="font-medium text-gray-900 dark:text-gray-100 mb-1">
-                  {c.name}
-                </p>
-                <p className="text-sm opacity-80 mb-1">{c.details}</p>
-                {c.email && (
-                  <p className="text-sm opacity-80">Email: {c.email}</p>
-                )}
-                {c.phone && (
-                  <p className="text-sm opacity-80">Phone: {c.phone}</p>
-                )}
-              </div>
-            ))}
-          </div>
+                {c.email}
+              </a>
+            </p>
+          )}
+
+          {c.phone && (
+            <p className="text-sm text-gray-400 mt-1">
+              <span className="text-gray-500">Phone:</span>{" "}
+              <a
+                href={`tel:${c.phone}`}
+                className="hover:text-[#C4001D] transition-colors"
+              >
+                {c.phone}
+              </a>
+            </p>
+          )}
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
+
     </main>
   );
 }

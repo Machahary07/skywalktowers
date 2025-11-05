@@ -32,8 +32,9 @@ export default function Navbar() {
             className="object-contain"
             priority
           />
-          <h1 className="text-2xl font-semibold tracking-wide flex items-baseline">
-            <span className="text-black dark:text-white">SKYWALK</span>
+          {/* Hide the text on tablet & mobile */}
+          <h1 className="hidden lg:flex text-2xl font-semibold tracking-wide items-baseline">
+            <span className="text-white">SKYWALK</span>
             <span className="text-[#C4001D] ml-1">TOWERS</span>
           </h1>
         </Link>

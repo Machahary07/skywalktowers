@@ -1,3 +1,43 @@
+/* Override Bootstrap and set base link styles */
+a {
+  color: inherit !important;
+  text-decoration: none;
+}
+
+a:hover {
+  color: inherit !important;
+  text-decoration: none;
+}
+
+/* Custom color classes with higher specificity */
+.text-\[\#C4001D\] {
+  color: #C4001D !important;
+}
+
+a.text-\[\#C4001D\] {
+  color: #C4001D !important;
+}
+
+a.text-\[\#C4001D\]:hover {
+  color: #C4001D !important;
+}
+
+/* Dark mode overrides */
+@media (prefers-color-scheme: dark) {
+  .dark\:text-\[\#C4001D\] {
+    color: #C4001D !important;
+  }
+  
+  a.dark\:text-\[\#C4001D\] {
+    color: #C4001D !important;
+  }
+  
+  a.dark\:text-\[\#C4001D\]:hover {
+    color: #C4001D !important;
+  }
+}
+
+/* Rest of your existing styles */
 @import "tailwindcss";
 
 :root {

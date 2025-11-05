@@ -4,7 +4,7 @@ export const aboutData = {
   intro: {
     title: "Where luxury meets elevation, and every step unveils a new horizon.",
     description: `Welcome to Skywalk Towers, a premier residential development in the heart of Guwahati, designed for those who seek luxury, comfort, and a unique urban experience. Located in Datalpara, Skywalk Towers offers spacious 3BHK and 4BHK apartments, combining modern living spaces with innovative architecture. What truly sets this project apart is its signature rooftop experience: interconnected recreational spaces across building blocks create a one-of-a-kind 'SKYWALK', where residents can stroll, relax, and enjoy panoramic views of the city skyline.`,
-    image: "/images/about-intro.webp",
+    image: "/images/features-hero.webp",
   },
 
   details: {
@@ -23,7 +23,7 @@ export const aboutData = {
       },
       {
         title: "KITCHEN",
-        image: "/images/details-kitchen.webp",
+        image: "/images/kitchen.webp",
         content:
           "Granite platform with 2' ceramic tile dado and stainless steel sink.",
       },
@@ -41,7 +41,7 @@ export const aboutData = {
       },
       {
         title: "DOORS AND WINDOWS",
-        image: "/images/details-doors.webp",
+        image: "/images/details-door.webp",
         content:
           "Doors - Wooden frame with modular flush door for Main door, WPC frame with modular flush door for Bedrooms and Bathrooms. Windows - Black profile Aluminium windows with 5mm glass. Railings - Glass railing with metal handrails.",
       },
